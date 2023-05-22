@@ -1,4 +1,5 @@
 import "./globals.css";
+import { NavMenu } from "@/features/NavMenu";
 
 export const metadata = {
   title: "Myspace Clone",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-rubik">{children}</body>
+      <body className="font-rubik">
+        <NavMenu />
+        {children}
+      </body>
     </html>
   );
 }
