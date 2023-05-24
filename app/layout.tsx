@@ -1,5 +1,6 @@
 import "./globals.css";
-import { NavMenu } from "@/features/NavMenu";
+import { NavMenu } from "@/features/Navigation";
+import { AuthProvider } from "@/features/Authentication";
 
 export const metadata = {
   title: "Myspace Clone",
@@ -13,11 +14,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="font-rubik">
-        <NavMenu />
-        {children}
-      </body>
-    </html>
+    <AuthProvider>
+      <html lang="en">
+        <body className="font-rubik">
+          <NavMenu />
+          {children}
+        </body>
+      </html>
+    </AuthProvider>
   );
 }
