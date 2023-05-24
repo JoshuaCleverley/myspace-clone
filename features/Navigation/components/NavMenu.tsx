@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { NavLink } from "./NavLink";
+import { SignInButton, SignOutButton } from "@/features/Authentication";
 
 export function NavMenu() {
   return (
@@ -11,6 +12,10 @@ export function NavMenu() {
         <NavLink href="/about">About</NavLink>
         <NavLink href="/blog">Blog</NavLink>
         <NavLink href="/users">Users</NavLink>
+        <li className="h-20 flex items-center p-1">
+          <SignInButton />
+          <SignOutButton />
+        </li>
       </ul>
     </nav>
   );
