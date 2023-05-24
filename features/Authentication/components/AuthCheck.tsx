@@ -5,7 +5,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export function RequireAuth({ children }: Props) {
+export function AuthCheck({ children }: Props) {
   const { data: session, status } = useSession();
 
   console.log(session, status);
