@@ -17,22 +17,17 @@ export default async function Page({ params }: Props) {
   const { name, bio, image } = user ?? {};
 
   return (
-    <div className="flex flex-col items-center p-4 text-center">
-      <h1 className="text-2xl mb-8">{name}</h1>
-      <div className="flex flex-row gap-10 w-3/5 items-center justify-center">
+    <div className="flex flex-col items-center text-center">
+      <h1 className="text-2xl my-8">{name}</h1>
+      <div className="grid grid-cols-2 w-3/5 max-md:grid-cols-1 max-lg:w-4/5">
         <img
           src={image ?? "/favicon.ico"}
           alt={`${name}'s profile`}
           className="rounded-lg object-cover mb-4"
         />
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col gap-8 h-full items-center justify-center">
           <h3 className="text-xl underline underline-offset-4">Bio</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-            alias. Error, explicabo? Doloremque dolor repudiandae temporibus
-            modi officia. Quas pariatur eum fuga illum modi consectetur amet
-            explicabo commodi aspernatur vitae.
-          </p>
+          <p>{bio ?? "This user has not written a bio."}</p>
         </div>
       </div>
     </div>
