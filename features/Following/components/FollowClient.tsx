@@ -7,11 +7,11 @@ type Props = {
   isFollowing: boolean;
 };
 
-export default function FollowClient({ targetUserId, isFollowing }: Props) {
+export function FollowClient({ targetUserId, isFollowing }: Props) {
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [isFetching, setIsFetching] = useState(false);
-  const isMutation = isPending || isFetching;
+  const isMutating = isPending || isFetching;
 
   const follow = async () => {
     setIsFetching(true);
@@ -45,7 +45,7 @@ export default function FollowClient({ targetUserId, isFollowing }: Props) {
 
   return (
     <button className="" onClick={isFollowing ? unfollow : follow}>
-      {isMutation ? "..." : isFollowing ? "Unfollow" : "Follow"}
+      {isMutating ? "Loading..." : isFollowing ? "Unfollow" : "Follow"}
     </button>
   );
 }

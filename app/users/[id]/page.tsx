@@ -1,3 +1,4 @@
+import { FollowButton } from "@/features/Following";
 import { prisma } from "@/lib/prisma";
 import { Metadata } from "next";
 
@@ -30,6 +31,8 @@ export default async function Page({ params }: Props) {
           <p>{bio ?? "This user has not written a bio."}</p>
         </div>
       </div>
+      {/* @ts-expect-error Server Component */}
+      <FollowButton targetUserId={params.id} />
     </div>
   );
 }
