@@ -1,17 +1,26 @@
 # Myspace Clone
 
-This is a Myspace/social media website created following a tutorial from Fireship.io
+This is a Myspace/social media website created following the Next.js full course from [Fireship.io](https://fireship.io/)
 
-## Installation
+# Features
 
-Use the package manager [npm](https://www.npmjs.com/) to install.
+- User Authentication using next-auth
+- Prisma ORM with neon postgres database
+- Following other users
 
-```bash
-npm install
-```
+# Possible future features
 
-## Usage
+- Posts
+- Comments
+- Likes
+- Messaging
 
-```bash
-npm run dev
-```
+# Tech Stack
+
+- Next.js 13
+- React
+- Typescript
+- next-auth
+- Prisma
+- Postgres
+- Tailwind CSS
